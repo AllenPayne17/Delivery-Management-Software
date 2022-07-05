@@ -54,12 +54,17 @@ header {
     font-family: 'Noto Sans', sans-serif;
 }
 .hero h1 {
+    background: linear-gradient(182.61deg, #000000 10.67%, #01B1FE 82.61%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-transform: uppercase;
     font-size: 45px;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
+    line-height: 45px;
 }
 .hero p {
     color: #AAAAAA;
-    ;
+    padding-top: 20px;
 }
