@@ -46,7 +46,7 @@ header {
 .content-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    justify-content: space-between;
 }
 .hero {
     padding-top: 50px;
