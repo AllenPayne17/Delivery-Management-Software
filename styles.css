@@ -5,6 +5,10 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
+}
+section {
+    padding: 50px;
 }
 /*
 font-family: 'Noto Sans', sans-serif;
@@ -12,10 +16,14 @@ font-family: 'Poppins', sans-serif;
 */
 header {
     background: linear-gradient(90.1deg, #0072F5 0%, #01B1FE 100%);
+    width: 100%;
     justify-content: space-between;
     display: flex;
     align-items: center;
-    padding: 0 100px;
+    padding: 0 50px;
+}
+.header-img {
+    padding-right: 50px;
 }
 .navbar {
     display: flex;
@@ -39,14 +47,12 @@ header {
     padding: 10px;
     border-radius: 10px;
     border: 2px solid #0072F5;
+    width: max-content;
 }
-.section-wrapper {
-    padding: 100px 100px 0 100px;
-}
-.content-wrapper {
+.home-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    padding: 100px 0 100px 0;
 }
 .hero {
     padding-top: 50px;
@@ -66,5 +72,65 @@ header {
 }
 .hero p {
     color: #AAAAAA;
-    padding-top: 20px;
+    padding: 20px 0;
+}
+.hero-img {
+    max-width: 100%;
+    height: auto;
+}
+.btn-button {
+    display: none;
+}
+#feature-section {
+    padding-top: 100px;
+    background: linear-gradient(153.74deg, #EAF0F6 0%, #FFFFFF 100%);
+}
+
+
+/*Responsive Quary*/
+@media (max-width: 350px) {
+    .header-img {
+        height: 40px;
+    }
+    .hero h1 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        padding: 0 25px;
+    }
+    section {
+        padding: 25px;
+    }
+    .home-wrapper {
+        padding: 25px 0 50px 0;
+    }
+
+}
+@media (max-width: 800px) {
+    .home-wrapper {
+        padding: 50px 0 50px 0;
+    }
+    .navbar {
+        display: none;
+    }
+    .btn-button {
+        display:block; 
+        margin: 0 auto;
+        background: linear-gradient(90.1deg, #0072F5 0%, #01B1FE 100%);
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 10px;
+        border-style: none;
+        border-radius: 10px;
+        width: max-content;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .home-wrapper {
+        flex-wrap: wrap;
+    }
 }
