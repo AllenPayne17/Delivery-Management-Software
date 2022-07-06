@@ -120,7 +120,7 @@ header {
     .home-wrapper {
         padding: 50px 0 50px 0;
     }
-    .button {
+    .navbar {
         display: none;
     }
     .btn-button {
@@ -137,26 +137,6 @@ header {
     }
 }
 @media (max-width: 600px) {
-    .logo {
-        background: linear-gradient(90.1deg, #0072F5 0%, #01B1FE 100%);
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        border: 1px solid #0072F5;
-    }
-    .header-img {
-        display: block;
-        margin: 0 auto;
-        padding-right: unset;
-    }
-    header {
-        all: unset;
-    }
-    .navbar {
-        background-color: black;
-        justify-content: center;
-        height: 50px;
-    }
     section {
         padding: 25px;
     }
