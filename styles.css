@@ -33,11 +33,34 @@ header {
     display: flex;
     gap: 50px;
 }
-.nav-list a {
+.nav-list .list {
+    position: relative;
+    padding: 5px 0 5px 0;
     font-weight: 500;
     color: white;
     font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
 }
+.nav-list .list:hover {
+    color: gold;
+}
+.navbar ul a::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background-color: gold;
+    bottom: 0;
+    transform: translateX(110px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(.55,0,.1,1);
+}
+.navbar ul a:hover::before {
+    transform: translateX(0px);
+    opacity: 1;
+    width: 30px;
+}
+
 .button {
     background-color: white;
     color: #0072F5;
@@ -52,7 +75,7 @@ header {
 .home-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 100px 0 100px 0;
+    padding: 100px 0 200px 0;
 }
 .hero {
     padding-top: 50px;
@@ -88,32 +111,16 @@ header {
 
 
 /*Responsive Quary*/
-@media (max-width: 350px) {
-    .header-img {
-        height: 40px;
-    }
-    .hero h1 {
-        font-size: 20px;
-        line-height: 20px;
-    }
-}
-@media (max-width: 600px) {
-    header {
-        padding: 0 25px;
-    }
-    section {
-        padding: 25px;
-    }
+@media only screen and (max-width: 992px) {
     .home-wrapper {
-        padding: 25px 0 50px 0;
+        flex-wrap: wrap;
     }
-
 }
 @media (max-width: 800px) {
     .home-wrapper {
         padding: 50px 0 50px 0;
     }
-    .navbar {
+    .button {
         display: none;
     }
     .btn-button {
@@ -123,14 +130,52 @@ header {
         color: white;
         text-transform: uppercase;
         font-weight: 600;
-        padding: 10px;
+        padding: 15px;
         border-style: none;
         border-radius: 10px;
         width: max-content;
     }
 }
-@media only screen and (max-width: 992px) {
+@media (max-width: 600px) {
+    .logo {
+        background: linear-gradient(90.1deg, #0072F5 0%, #01B1FE 100%);
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        border: 1px solid #0072F5;
+    }
+    .header-img {
+        display: block;
+        margin: 0 auto;
+        padding-right: unset;
+    }
+    header {
+        all: unset;
+    }
+    .navbar {
+        background-color: black;
+        justify-content: center;
+        height: 50px;
+    }
+    section {
+        padding: 25px;
+    }
     .home-wrapper {
-        flex-wrap: wrap;
+        padding: 25px 0 100px 0;
+    }
+    .hero h1 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .hero p {
+        padding: 10px 0;
+    }
+}
+@media (max-width: 350px) {
+    .header-img {
+        height: 40px;
+    }
+    .nav-list {
+        gap: 25px;
     }
 }
